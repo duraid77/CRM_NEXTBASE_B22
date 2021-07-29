@@ -7,11 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        plugin = {
-                "html: target/cucumber-report.html",
-                "json:target/cucumber.json",
-                "rerun:target/rerun.txt"
-        },
+        plugin = "html: target/cucumber-report.html",
         features = "src/test/resources/feature",
         glue = "com/nextbase/stepDefinitions",
         dryRun = false,
