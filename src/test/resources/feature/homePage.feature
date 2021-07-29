@@ -19,4 +19,5 @@ Feature: Homepage functionality
 
   Scenario: Users can write a comment to a post
 
+
   Scenario: Users are able to follow a post by clicking "Follow" button
