@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class PostViewers_StepsDefinitions {
+public class EyeIcon_StepsDefinitions {
     HomePage homePage = new HomePage();
     @When("User hovers over the eye icon on the recent post under Activity Stream")
     public void user_hovers_over_the_eye_icon_on_the_recent_post_under_activity_stream() {
