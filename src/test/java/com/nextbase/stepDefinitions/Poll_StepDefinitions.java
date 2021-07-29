@@ -22,14 +22,16 @@ public class Poll_StepDefinitions {
     }
     @When("User fills out the {string} box")
     public void user_fills_out_the_box(String string) {
-
+        string = "random entry";
+        homePge.questionBox.sendKeys(string);
     }
     @When("User clicks on {string} button")
     public void user_clicks_on_button(String string) {
+        homePge.buttonClicker(string);
 
     }
     @Then("User should see {string}")
     public void user_should_see(String string) {
-
+        homePge.messageVerification(string);
     }
 }
