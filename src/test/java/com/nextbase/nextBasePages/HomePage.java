@@ -27,10 +27,15 @@ public class HomePage extends BasePage{
     public WebElement errorMessage;
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
+    TS_001_Aziz(US_3)
+    @FindBy(xpath = "(//div[@class='feed-wrap'])[2]//div//div//div//div[5]//span[4]")
+    public WebElement eyeIconLatestPost;
+
+    @FindBy(xpath = "//*[@id='bx-contentview-cnt-popup-cont-BLOG_POST-4210']/span[1]")
+    public WebElement views;
+
     @FindBy(id= "bx-b-link-blogPostForm")
-        public WebElement linkButton;
-
-
+     public WebElement linkButton;
 
     @FindBy(xpath = "//input[@id='undefined']")
     public WebElement saveButton;
@@ -42,10 +47,6 @@ public class HomePage extends BasePage{
 
 
     }
-
-
-
-
 
 
     //=======================================================================================
