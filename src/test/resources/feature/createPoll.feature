@@ -1,3 +1,4 @@
+@wip
 Feature: Create poll functionality
   Agile Story: As a user I should be able to create a poll
 
