@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = "html: target/cucumber-report.html",
         features = "src/test/resources/feature",
         glue = "com/nextbase/stepDefinitions",
-        dryRun = true,
-        tags = ""
+        dryRun = false,
+        tags = "@US2_TS-002_Berk"
 )
 
 
