@@ -12,6 +12,7 @@ public class Hooks {
     @Before
     public void setup(){
         Driver.getDriver().get(ConfigurationReader.getProperty("nextBaseUrl"));
+
     }
 
     @After
