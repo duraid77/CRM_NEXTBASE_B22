@@ -7,7 +7,8 @@ Feature: Create poll functionality
 
 
   Scenario: Users create a poll with Q/A
-@US2_TS-002_Berk
+
+  @US2_TS-002_Berk
   Scenario: Users get error message "The message title is not specified"
     When User clicks on "Poll" tab
     And User fills out the "Question" box

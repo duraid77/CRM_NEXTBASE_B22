@@ -14,10 +14,12 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginButton;
 
+
     public void loginMethod(String username, String password){
         usernameBox.sendKeys(username);
-        passwordBox.sendKeys(password);
+        passwordBox.sendKeys(password);//
         loginButton.click();
 
     }
+
 }
