@@ -27,6 +27,22 @@ public class HomePage extends BasePage{
     public WebElement errorMessage;
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
+    @FindBy(id= "bx-b-link-blogPostForm")
+        public WebElement linkButton;
+
+
+
+    @FindBy(xpath = "//input[@id='undefined']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-href']")
+    public WebElement linkUrl;
+
+    public void linkVerification (String actual, String expected) {
+
+
+    }
+
 
 
 

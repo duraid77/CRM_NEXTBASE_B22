@@ -20,6 +20,7 @@ public class Poll_StepDefinitions {
     public void user_click_on_tab(String string) {
         homePge.tabClicker(string);
     }
+
     @When("User fills out the {string} box")
     public void user_fills_out_the_box(String string) {
         string = "random entry";
