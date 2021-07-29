@@ -10,4 +10,4 @@ Feature: Send message functionality
     When User click on "Message" tab
     And User not fills out the message box
     And User clicks on "Send" button
-    Then User should see "The message title is not specified" text
+    Then User should see "The message title is not specified"
