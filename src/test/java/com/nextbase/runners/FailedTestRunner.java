@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
 
 
 )
-public class Failed_test_runner {
+public class FailedTestRunner {
 }
