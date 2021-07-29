@@ -1,12 +1,20 @@
 package com.nextbase.stepDefinitions;
 
+import com.nextbase.utlity.ConfigurationReader;
 import com.nextbase.utlity.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
+    @Before
+    public void setup(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("nextBaseUrl"));
+
+    }
+
     @After
     public void tearDownScenario(Scenario scenario){
 
@@ -22,8 +30,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
-
-        System.out.println("AFTER--Teardown steps are being applied...");
         Driver.closeDriver();
     }
 }
