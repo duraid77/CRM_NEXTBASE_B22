@@ -25,9 +25,7 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//span[@class='feed-add-info-text']")
     public WebElement errorMessage;
-    //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
-    TS_001_Aziz(US_3)
     @FindBy(xpath = "(//div[@class='feed-wrap'])[2]//div//div//div//div[5]//span[4]")
     public WebElement eyeIconLatestPost;
 
@@ -42,14 +40,16 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-href']")
     public WebElement linkUrl;
+    //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
     public void linkVerification (String actual, String expected) {
 
 
     }
 
-
     //=======================================================================================
+
+
     public void tabClicker(String tabName){
         Driver.getDriver().findElement(By.xpath("//span[.='"+tabName +"']")).click();
     }
