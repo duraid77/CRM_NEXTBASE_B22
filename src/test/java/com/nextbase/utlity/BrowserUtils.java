@@ -1,7 +1,11 @@
 package com.nextbase.utlity;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,5 +39,18 @@ import java.util.List;
                 System.out.println("something happened in the sleep method");
             }
         }
+
+        public static void hoverOver(WebElement element){
+            Actions action = new Actions(Driver.getDriver());
+            action.moveToElement(element).perform();
+
+        }
+
+        public static void waitUntilVisible(WebElement element){
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(),14);
+            wait.until(ExpectedConditions.visibilityOf(element));
+        }
+
+
     }
 

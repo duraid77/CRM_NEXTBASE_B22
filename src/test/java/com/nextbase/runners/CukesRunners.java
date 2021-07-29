@@ -6,11 +6,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+  
         plugin = "html: target/cucumber-report.html",
         features = "src/test/resources/feature",
         glue = "com/nextbase/stepDefinitions",
-        dryRun = false,
-        tags = "@US2_TS-002_Berk or @wip"
+        dryRun = true,
+        tags = "@wip"
+
 )
 
 
