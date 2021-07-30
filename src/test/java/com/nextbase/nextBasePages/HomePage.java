@@ -26,11 +26,14 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[@class='feed-add-info-text']")
     public WebElement errorMessage;
 
-    @FindBy(xpath = "(//div[@class='feed-wrap'])[2]//div//div//div//div[5]//span[4]")
+    @FindBy(xpath = "((//div[@id='log_internal_container'])//span[@class='feed-content-view-cnt-wrap']/..)[1]")
     public WebElement eyeIconLatestPost;
+    @FindBy(xpath = "((//div[@id='log_internal_container'])//span[@class='feed-content-view-cnt-wrap']/..)[1]//span//span")
+    public WebElement eyeNumber;
 
-    @FindBy(xpath = "//*[@id='bx-contentview-cnt-popup-cont-BLOG_POST-4210']/span[1]")
-    public WebElement views;
+
+    @FindBy(xpath = "//span[.='Views']//span")
+    public WebElement viewers;
 
     @FindBy(id= "bx-b-link-blogPostForm")
      public WebElement linkButton;
