@@ -8,9 +8,9 @@ Feature: Homepage functionality
     #Begin your steps after the "GIVEN" since it is placed as a background
 
   @TS_001 @US3 #TS_001-Aziz
-  Scenario: Users can see who are the people that viewed a post with eye icon
+  Scenario: Users should see the number of users that viewed the post
     When User hovers over the eye icon on the recent post under Activity Stream
-    Then User should see list of viewers
+    Then User should see the number of users that viewed the post
 
   @TS_002 @US3 #TS_002-Chrissy
   Scenario: Users click "Like" button for any post

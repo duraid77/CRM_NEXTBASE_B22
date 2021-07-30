@@ -11,11 +11,12 @@ public class EyeIcon_StepsDefinitions {
     @When("User hovers over the eye icon on the recent post under Activity Stream")
     public void user_hovers_over_the_eye_icon_on_the_recent_post_under_activity_stream() {
         BrowserUtils.hoverOver(homePage.eyeIconLatestPost);
-
     }
-    @Then("User should see list of viewers")
-    public void user_should_see_list_of_viewers() {
-        BrowserUtils.waitUntilVisible(homePage.views);
-        Assert.assertTrue(homePage.views.isDisplayed());
+
+
+    @Then("User should see the number of users that viewed the post")
+    public void userShouldSeeTheNumberOfUsersThatViewedThePost() {
+        Assert.assertTrue(Integer.parseInt(homePage.eyeNumber.getText()) > -1);
+
     }
 }
