@@ -5,7 +5,13 @@ Feature: Send message functionality
     Given User is logged in and on the home page
     #Begin your steps after the "GIVEN" since it is placed as a background
 
-  Scenario: Users send message with "Message" tab
+
+  @US1_TS-001_Lwin
+  Scenario: User send message with "Message" tab
+   When User click on "Message" tab
+   Then User should be able to send "Message" on message tab
+
+
 
 
     Scenario: Users cancel messages
