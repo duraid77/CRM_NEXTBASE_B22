@@ -8,13 +8,22 @@ Feature: Send message functionality
   Scenario: Users send message with "Message" tab
 
 
-    Scenario: Users cancel messages
+  Scenario: Users cancel messages
 
 
-      //TS_003_US1
-      Scenario: Users attach link with link icon
-        When  User clicks "Link" button under the "Message" tab
-        Then User enters any "<link>" in "Link" field on the prompt
-        And User clicks Save button on the prompt
-        And User clicks Send button under "Message" tab
-        Then User should see "link" displayed on the homepage under "Activity Stream" field
+  //TS_003_US1
+
+  Scenario: Users attach link with link icon
+    When  User clicks "Link" button under the "Message" tab
+    Then User enters any "<link>" in "Link" field on the prompt
+    And User clicks Save button on the prompt
+    And User clicks Send button under "Message" tab
+    Then User should see "link" displayed on the homepage under "Activity Stream" field
+
+
+  //TS_004_Rasim
+  Scenario: User can not send message
+    When User click on "Message" tab
+    And User not fills out the message box
+    And User clicks on "Send" button
+    Then User should see "The message title is not specified"
