@@ -50,6 +50,12 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[@class='feed-post-emoji-icon-item  feed-post-emoji-icon-like feed-post-emoji-icon-item-1']")
     public WebElement likeVerification;
 
+    @FindBy(id = "blog-submit-button-cancel")
+    public WebElement pollCancelButton;
+
+    @FindBy(xpath = "//span[.='Message']//span")
+    public WebElement messageButton;
+
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
     public void linkVerification (String actual, String expected) {
