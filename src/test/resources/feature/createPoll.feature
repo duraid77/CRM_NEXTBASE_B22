@@ -18,4 +18,9 @@ Feature: Create poll functionality
 
   Scenario: Users check "allow multiple choice" while creating a poll
 
+  @Inthira
   Scenario: Users are able to cancel creating a poll
+    When User clicks on "Poll" tab
+    Then User fills out the "Question" box
+    And User clicks on "Cancel" button in poll tab
+    Then User should see blue color tab move back to message button
