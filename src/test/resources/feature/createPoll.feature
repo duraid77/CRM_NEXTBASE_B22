@@ -23,4 +23,4 @@ Feature: Create poll functionality
     When User clicks on "Poll" tab
     Then User fills out the "Question" box
     And User clicks on "Cancel" button in poll tab
-    Then User should see blue color tab move back to message button
+    Then User should not see Question box on the page

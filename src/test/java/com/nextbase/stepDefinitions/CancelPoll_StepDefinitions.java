@@ -5,6 +5,9 @@ import com.nextbase.nextBasePages.LoginPage;
 import com.nextbase.utlity.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 public class CancelPoll_StepDefinitions {
     //LoginPage login = new LoginPage();
@@ -17,12 +20,17 @@ public class CancelPoll_StepDefinitions {
         homepage.pollCancelButton.click();
 
     }
-    @Then("User should see blue color tab move back to message button")
+    @Then("User should not see Question box on the page")
     public void user_should_see_blue_color_tab_move_back_to_message_button() {
-        String actual = homepage.messageButton.getText();
-        String expected = "Message";
-        Assert.assertTrue(expected.equals(actual));
+//        String actual = homepage.messageButton.getText();
+//        String expected = "Message";
+//        Assert.assertTrue(expected.equals(actual));
 
+//        WebElement switchLabel = Driver.getDriver().findElement(By.cssSelector("span[class='feed-add-post-form-link feed-add-post-form-link-active']"));
+//        String colorRGB = ((JavascriptExecutor)Driver.getDriver()).executeScript("return window.getComputedStyle(arguments[0], '::after').getPropertyValue('background-color');",switchLabel).toString();
+
+
+        Assert.assertFalse(homepage.questionBox.isDisplayed());
 
     }
 }
