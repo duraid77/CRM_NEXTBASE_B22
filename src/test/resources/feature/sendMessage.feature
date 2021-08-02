@@ -16,7 +16,6 @@ Feature: Send message functionality
 
   Scenario: Users cancel messages
 
-
   //TS_003_US1
 
   Scenario: Users attach link with link icon
@@ -27,7 +26,7 @@ Feature: Send message functionality
     Then User should see "link" displayed on the homepage under "Activity Stream" field
 
 
-  //TS_004_Rasim
+  @TS_004_Rasim
   Scenario: User can not send message
     When User click on "Message" tab
     And User not fills out the message box
