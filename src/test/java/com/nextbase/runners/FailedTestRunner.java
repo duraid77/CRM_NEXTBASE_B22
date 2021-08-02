@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = "@target/rerun.txt",
-        glue = "com/cybertek/step_definitions"
+        glue = "com/nextbase/step_definitions"
 
 
 )
-public class Failed_test_runner {
+public class FailedTestRunner {
 }
