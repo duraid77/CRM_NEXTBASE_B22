@@ -89,6 +89,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath= "//body")
     public WebElement messageBody;
 
+    @FindBy(xpath = "//body[@contenteditable='true']")
+    public WebElement messagebody;
+
     
 
 
