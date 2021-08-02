@@ -39,6 +39,7 @@ HomePage homepage = new HomePage();
         if (homepage.latestPost.isDisplayed()) {
             System.out.println("Link is displayed on the page");
             //not dynamic, passes but but need to fix this
+            //jhjhgjh
         }
     }
     }
