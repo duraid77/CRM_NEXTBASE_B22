@@ -12,10 +12,10 @@ Feature: Homepage functionality
     When User hovers over the eye icon on the recent post under Activity Stream
     Then User should see the number of users that viewed the post
 
-  @TS_002 @US3 #TS_002-Chrissy
+  @TS_002 #TS_002-Chrissy
   Scenario: Users click "Like" button for any post
     When user clicks on like button
-    Then user can see account name under the like sign
+    Then user can see like sign
 
   @TS_003 @US3 #TS_002-Oogii
   Scenario: Users can write a comment to a post
