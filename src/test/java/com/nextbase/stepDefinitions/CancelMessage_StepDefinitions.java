@@ -28,7 +28,7 @@ public class CancelMessage_StepDefinitions {
         message = ConfigurationReader.getProperty("textMessage");
         homePage.messageBody.sendKeys(message);
         Driver.getDriver().switchTo().defaultContent();
-        Thread.sleep(4);
+        Thread.sleep(3000);
        }
 
     @Then("User clicks on {string} button in a message tab on bottom")
