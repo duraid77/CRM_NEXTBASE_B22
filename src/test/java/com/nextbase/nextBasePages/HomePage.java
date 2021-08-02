@@ -64,7 +64,7 @@ public class HomePage extends BasePage{
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
 
-    @FindBy(xpath = "//a[contains(@id,'blog-post-addc-add-4320')]")
+    @FindBy(xpath = "(//a[.='Comment'])[1]")
     public WebElement commentBtn;
 
     @FindBy(xpath = "(//button[.='Send'])[1]")

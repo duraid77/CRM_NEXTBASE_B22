@@ -17,7 +17,7 @@ Feature: Homepage functionality
     When user clicks on like button
     Then user can see like sign
 
-  @TS_003 @US3 #TS_002-Oogii
+  @TS_003  #TS_002-Oogii
   Scenario: Users can write a comment to a post
     When users click comment button for any post
     And users able to write a comment to any post
