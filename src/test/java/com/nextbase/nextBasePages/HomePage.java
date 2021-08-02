@@ -18,6 +18,7 @@ public class HomePage extends BasePage{
     public WebElement questionBox;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+
     public WebElement sendButton;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
@@ -57,6 +58,17 @@ public class HomePage extends BasePage{
     public WebElement messageButton;
 
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
+
+    @FindBy(xpath = "//input[@placeholder='Answer  1']")
+    public WebElement pollAnswer1;
+
+    @FindBy(xpath = "//input[@placeholder='Answer  2']")
+    public WebElement pollAnswer2;
+
+    @FindBy(xpath = "//div[@class='bx-vote-question-title']")
+    public WebElement pollTextCreated;
+
+
 
     public void linkVerification (String actual, String expected) {
 
