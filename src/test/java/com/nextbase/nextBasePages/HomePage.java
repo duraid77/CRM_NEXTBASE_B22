@@ -61,7 +61,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//button[@id='lhe_button_submit_blogPostForm']")
     public WebElement cancelMessage;
 
-    @FindBy(xpath = "(//a[.='www.cybertek.com'])[1]")
+    @FindBy(xpath = "(//a[.='www.testtest.com'])[1]")
     public WebElement latestPost;
 
 
