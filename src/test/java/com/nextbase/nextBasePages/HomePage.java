@@ -58,7 +58,17 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[.='Message']//span")
     public WebElement messageButton;
 
+    @FindBy(xpath = "//button[@id='lhe_button_submit_blogPostForm']")
+    public WebElement cancelMessage;
+
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
+
+
+    @FindBy(xpath = "//a[contains(@id,'blog-post-addc-add-4320')]")
+    public WebElement commentBtn;
+
+    @FindBy(xpath = "(//button[.='Send'])[1]")
+    public WebElement sendBtn;
 
     @FindBy(xpath = "//input[@placeholder='Answer  1']")
     public WebElement pollAnswer1;
@@ -75,8 +85,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath= "//body")
     public WebElement messageBody;
 
-
-
+    
 
 
     public void linkVerification (String actual, String expected) {

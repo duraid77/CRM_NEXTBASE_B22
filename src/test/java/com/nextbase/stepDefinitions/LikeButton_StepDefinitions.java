@@ -13,10 +13,9 @@ public class LikeButton_StepDefinitions {
     public void user_clicks_on_like_button() {
         homePage.likeButton.click();
     }
-    @Then("user can see account name under the like sign")
-    public void userCanSeeAccountNameUnderTheLikeSign() {
 
-        String userName = ConfigurationReader.getProperty("username");
-        Assert.assertTrue(homePage.likeVerification.isDisplayed());
+    @Then("user can see like sign")
+    public void userCanSeeLikeSign() {
+        Assert.assertTrue(homePage.likeButton.isDisplayed());
     }
 }

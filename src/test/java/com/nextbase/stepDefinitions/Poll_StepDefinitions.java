@@ -26,6 +26,7 @@ public class Poll_StepDefinitions {
         homePge.tabClicker(string);
     }
 
+
     @When("User fills out the {string} box")
     public void user_fills_out_the_box(String inputbox) {
         homePge.fillingForm(inputbox);
