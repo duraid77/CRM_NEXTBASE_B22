@@ -68,6 +68,14 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//div[@class='bx-vote-question-title']")
     public WebElement pollTextCreated;
 
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
+    public WebElement messageFrame;
+
+    @FindBy(xpath= "//body")
+    public WebElement messageBody;
+
+
+
 
 
     public void linkVerification (String actual, String expected) {

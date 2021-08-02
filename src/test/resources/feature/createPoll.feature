@@ -28,9 +28,10 @@ Feature: Create poll functionality
     @duraid
     Scenario: Users create a poll with Q/A
       When User clicks on "Poll" tab
+      And User write a "message"
       And User fills out the "Question" box
-      And User fills out the Answer1 box
-      And User fills out the Answer2 box
+      And User fills out the "Answer1" box
+      And User fills out the "Answer2" box
       And User clicks on "Send" button
       Then poll should be visible in Activity Stream
 

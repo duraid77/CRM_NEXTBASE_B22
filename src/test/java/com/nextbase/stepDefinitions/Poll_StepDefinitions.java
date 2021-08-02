@@ -1,8 +1,11 @@
 package com.nextbase.stepDefinitions;
 
+import com.github.javafaker.Faker;
 import com.nextbase.nextBasePages.HomePage;
 import com.nextbase.nextBasePages.LoginPage;
+import com.nextbase.utlity.BrowserUtils;
 import com.nextbase.utlity.ConfigurationReader;
+import com.nextbase.utlity.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,10 +27,21 @@ public class Poll_StepDefinitions {
     }
 
     @When("User fills out the {string} box")
-    public void user_fills_out_the_box(String string) {
-        string = ConfigurationReader.getProperty("pollQuestion") ;
-        homePge.questionBox.sendKeys(string);
+    public void user_fills_out_the_box(String inputbox) {
+        switch(inputbox){
+            case "Question":
+                homePge.questionBox.sendKeys(ConfigurationReader.getProperty("pollQuestion"));
+                break;
+            case "Answer1":
+                homePge.pollAnswer1.sendKeys(ConfigurationReader.getProperty("pollAnswer1"));
+                break;
+            case "Answer2":
+                homePge.pollAnswer2.sendKeys(ConfigurationReader.getProperty("pollAnswer2"));
+                break;
+        }
+
     }
+
     @When("User clicks on {string} button")
     public void user_clicks_on_button(String string) {
         homePge.buttonClicker(string);
@@ -38,21 +52,24 @@ public class Poll_StepDefinitions {
         homePge.messageVerification(string);
     }
 
-    @When("User fills out the Answer1 box")
-    public void user_fills_out_the_answer1_box() {
-       homePge.pollAnswer1.sendKeys(ConfigurationReader.getProperty("pollAnswer1"));
-    }
-    @When("User fills out the Answer2 box")
-    public void user_fills_out_the_answer2_box() {
-        homePge.pollAnswer2.sendKeys(ConfigurationReader.getProperty("pollAnswer2"));
-    }
 
     @Then("poll should be visible in Activity Stream")
     public void poll_should_be_visible_in_activity_stream() {
         String expectedPollText = ConfigurationReader.getProperty("pollQuestion");
+        BrowserUtils.sleep(2);
         String actualPollText = homePge.pollTextCreated.getText();
         Assert.assertEquals(actualPollText,expectedPollText);
     }
+
+    @When("User write a {string}")
+    public void user_write_a(String message) {
+
+        Driver.getDriver().switchTo().frame(homePge.messageFrame);
+        message = ConfigurationReader.getProperty("pollMessage");
+        homePge.messageBody.sendKeys(message);
+        Driver.getDriver().switchTo().defaultContent();
+    }
+
 
 
 
