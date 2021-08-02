@@ -22,7 +22,7 @@ HomePage homepage = new HomePage();
     @Then("User enters any {string} in {string} field on the prompt")
     public void user_enters_any_in_field_on_the_prompt(String string, String string2) {
         homepage.linkButton.click();
-        String link = "www.amazon.com";
+        String link = "www.cybertek.com";
         homepage.linkUrl.sendKeys(link);
 
 
@@ -36,7 +36,8 @@ HomePage homepage = new HomePage();
 
     @Then("User should see {string} displayed on the homepage under {string} field")
     public void user_should_see_displayed_on_the_homepage_under_field(String string, String string2) {
-       //NEEDS WORK -> homepage.sendLink("amazon");
-        // HELP
+        if (homepage.latestPost.isDisplayed()) {
+            System.out.println("Link is displayed on the page");
+        }
     }
-}
+    }
