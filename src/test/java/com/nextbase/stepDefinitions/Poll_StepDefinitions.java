@@ -26,19 +26,10 @@ public class Poll_StepDefinitions {
         homePge.tabClicker(string);
     }
 
+
     @When("User fills out the {string} box")
     public void user_fills_out_the_box(String inputbox) {
-        switch(inputbox){
-            case "Question":
-                homePge.questionBox.sendKeys(ConfigurationReader.getProperty("pollQuestion"));
-                break;
-            case "Answer1":
-                homePge.pollAnswer1.sendKeys(ConfigurationReader.getProperty("pollAnswer1"));
-                break;
-            case "Answer2":
-                homePge.pollAnswer2.sendKeys(ConfigurationReader.getProperty("pollAnswer2"));
-                break;
-        }
+        homePge.fillingForm(inputbox);
 
     }
 

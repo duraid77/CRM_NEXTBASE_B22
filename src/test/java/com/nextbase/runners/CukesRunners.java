@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/feature",
         glue = "com/nextbase/stepDefinitions",
         dryRun = false,
-        tags = "@duraid"
+       // tags = "@US2_TS-002_Berk"
+        tags = "@US1_TS_002_Maria"
 
 )
 
