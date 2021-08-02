@@ -1,5 +1,6 @@
 package com.nextbase.nextBasePages;
 
+import com.github.javafaker.Faker;
 import com.nextbase.utlity.ConfigurationReader;
 import com.nextbase.utlity.Driver;
 import org.junit.Assert;
@@ -94,6 +95,12 @@ public class HomePage extends BasePage{
 
     
 
+    Faker faker = new Faker();
+    public final String linkFaker = faker.internet().emailAddress();
+
+    public void assertLink(String str){
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//a[.='"+linkFaker+"']")).isDisplayed());
+    }
 
     public void linkVerification (String actual, String expected) {
 
