@@ -14,8 +14,6 @@ import org.junit.runner.RunWith;
 
         tags = "@TS_002"
 
-       // tags = "@US2_TS-002_Berk"
-        tags = "@US1_TS_002_Maria"
 
 )
 
