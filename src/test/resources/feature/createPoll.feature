@@ -5,14 +5,12 @@ Feature: Create poll functionality
     Given User is logged in and on the home page
     #Begin your steps after the "GIVEN" since it is placed as a background
 
-
+  @Berk
   Scenario: Users get error message "The message title is not specified"
     When User clicks on "Poll" tab
     And User fills out the "Question" box
     And User clicks on "Send" button
     Then User should see "The message title is not specified"
-
-  Scenario: Users check "allow multiple choice" while creating a poll
 
   @Inthira
   Scenario: Users are able to cancel creating a poll
