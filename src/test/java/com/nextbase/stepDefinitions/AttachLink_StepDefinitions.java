@@ -38,6 +38,7 @@ HomePage homepage = new HomePage();
     public void user_should_see_displayed_on_the_homepage_under_field(String string, String string2) {
         if (homepage.latestPost.isDisplayed()) {
             System.out.println("Link is displayed on the page");
+            //not dynamic
         }
     }
     }
