@@ -8,8 +8,10 @@ Feature: Send message functionality
 
   @US1_TS-001_Lwin
   Scenario: User send message with "Message" tab
-   When User click on "Message" tab
-   Then User should be able to send "Message" on message tab
+    When User clicks on "Message" tab
+    And User enter any "text" on the "Message" field
+    And User clicks on "Send" button
+    Then User should see "text" displayed on the homepage under "Activity Stream" field
 
 
 
