@@ -1,5 +1,6 @@
 package com.nextbase.nextBasePages;
 
+import com.nextbase.utlity.ConfigurationReader;
 import com.nextbase.utlity.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -99,5 +100,19 @@ public class HomePage extends BasePage{
     public void messageVerification(String message){
         System.out.println(errorMessage.getText());
         Assert.assertEquals("Message verification failed",message, errorMessage.getText());
+    }
+
+    public void fillingForm(String str){
+        switch(str){
+            case "Question":
+                questionBox.sendKeys(ConfigurationReader.getProperty("pollQuestion"));
+                break;
+            case "Answer1":
+                pollAnswer1.sendKeys(ConfigurationReader.getProperty("pollAnswer1"));
+                break;
+            case "Answer2":
+                pollAnswer2.sendKeys(ConfigurationReader.getProperty("pollAnswer2"));
+                break;
+        }
     }
 }
