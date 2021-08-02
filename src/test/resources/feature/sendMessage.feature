@@ -28,3 +28,11 @@ Feature: Send message functionality
         And User clicks Save button on the prompt
         And User clicks on "Send" button
         Then User should see "link" displayed on the homepage under "Activity Stream" field
+
+
+        @TS_004_US1_Rasim
+        Scenario: User should not send message
+          When User clicks on "Message" tab
+          Then User fills out the "Text" box
+          And User clicks on "Send" button
+          Then User should see "The message title is not specified"
