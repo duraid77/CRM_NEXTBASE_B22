@@ -1,5 +1,6 @@
 package com.nextbase.nextBasePages;
 
+import com.nextbase.utlity.ConfigurationReader;
 import com.nextbase.utlity.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -18,6 +19,7 @@ public class HomePage extends BasePage{
     public WebElement questionBox;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+
     public WebElement sendButton;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
@@ -50,13 +52,41 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[@class='feed-post-emoji-icon-item  feed-post-emoji-icon-like feed-post-emoji-icon-item-1']")
     public WebElement likeVerification;
 
+    @FindBy(id = "blog-submit-button-cancel")
+    public WebElement pollCancelButton;
+
+    @FindBy(xpath = "//span[.='Message']//span")
+    public WebElement messageButton;
+
+    @FindBy(xpath = "//button[@id='lhe_button_submit_blogPostForm']")
+    public WebElement cancelMessage;
+
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
+
 
     @FindBy(xpath = "//a[contains(@id,'blog-post-addc-add-4320')]")
     public WebElement commentBtn;
 
     @FindBy(xpath = "(//button[.='Send'])[1]")
     public WebElement sendBtn;
+
+    @FindBy(xpath = "//input[@placeholder='Answer  1']")
+    public WebElement pollAnswer1;
+
+    @FindBy(xpath = "//input[@placeholder='Answer  2']")
+    public WebElement pollAnswer2;
+
+    @FindBy(xpath = "//div[@class='bx-vote-question-title']")
+    public WebElement pollTextCreated;
+
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
+    public WebElement messageFrame;
+
+    @FindBy(xpath= "//body")
+    public WebElement messageBody;
+
+
+
 
 
     public void linkVerification (String actual, String expected) {
@@ -80,5 +110,19 @@ public class HomePage extends BasePage{
     public void messageVerification(String message){
         System.out.println(errorMessage.getText());
         Assert.assertEquals("Message verification failed",message, errorMessage.getText());
+    }
+
+    public void fillingForm(String str){
+        switch(str){
+            case "Question":
+                questionBox.sendKeys(ConfigurationReader.getProperty("pollQuestion"));
+                break;
+            case "Answer1":
+                pollAnswer1.sendKeys(ConfigurationReader.getProperty("pollAnswer1"));
+                break;
+            case "Answer2":
+                pollAnswer2.sendKeys(ConfigurationReader.getProperty("pollAnswer2"));
+                break;
+        }
     }
 }

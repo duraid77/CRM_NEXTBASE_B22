@@ -13,11 +13,14 @@ Feature: Send message functionality
 
 
 
-
+    @US1_TS_002_Maria
     Scenario: Users cancel messages
+     When User clicks on "Message" tab on home page
+      And User types in the "text"
+      Then User clicks on "Cancel" button in a message tab on bottom
 
 
-      //TS_003_US1
+
       @wip
       Scenario: Users attach link with link icon
         When User clicks on "Message" tab
