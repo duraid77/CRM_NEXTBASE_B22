@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
         glue = "com/nextbase/stepDefinitions",
         dryRun = false,
 
-        tags = "@TS_002"
+        tags = "@TS_004_Rasim"
+
 
 
 )
