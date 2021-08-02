@@ -61,6 +61,10 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//button[@id='lhe_button_submit_blogPostForm']")
     public WebElement cancelMessage;
 
+    @FindBy(xpath = "(//a[.='www.tesla.com'])[1]")
+    public WebElement latestPost;
+
+
     //TODO IF YOU HAVE MORE ELEMENT RELATED TO THIS PAGE PLACE THEM BEFORE THE METHODS BELOW
 
 
@@ -95,6 +99,9 @@ public class HomePage extends BasePage{
 
     //=======================================================================================
 
+    public void sendLink(String str){
+        Driver.getDriver().findElement(By.xpath("//a[.='www."+str+".com'])[1]"));
+    }
 
     public void tabClicker(String tabName){
         Driver.getDriver().findElement(By.xpath("//span[.='"+tabName +"']")).click();

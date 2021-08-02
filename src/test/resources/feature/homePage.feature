@@ -1,5 +1,4 @@
-@wip
-  #US-3
+#US-3
 Feature: Homepage functionality
   Agile Story: As a user I should be able to see posts from homepage
 

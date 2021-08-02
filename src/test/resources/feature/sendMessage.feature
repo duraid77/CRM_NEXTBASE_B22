@@ -21,7 +21,7 @@ Feature: Send message functionality
 
 
 
-      @wip
+  @US2_TS-002_Parvin
       Scenario: Users attach link with link icon
         When User clicks on "Message" tab
         Then User enters any "<link>" in "Link" field on the prompt
