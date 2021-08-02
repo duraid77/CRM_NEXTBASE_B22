@@ -85,8 +85,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath= "//body")
     public WebElement messageBody;
 
-
-
+    
 
 
     public void linkVerification (String actual, String expected) {

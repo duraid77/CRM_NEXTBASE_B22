@@ -34,6 +34,6 @@ public class CancelMessage_StepDefinitions {
     @Then("User clicks on {string} button in a message tab on bottom")
     public void userClicksOnButtonInAMessageTabOnBottom(String arg0) throws InterruptedException {
         homePage.buttonClicker(arg0);
-        Thread.sleep(4);
+        Thread.sleep(3000);
     }
 }
